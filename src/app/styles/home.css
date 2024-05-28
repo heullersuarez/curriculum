@@ -1,0 +1,16 @@
+.text-update {
+    animation: moving 18s linear infinite;
+}
+
+.text-update span {
+    padding-inline: 0.5rem;
+}
+
+@keyframes moving {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
