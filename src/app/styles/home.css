@@ -1,6 +1,18 @@
-.text-update {
-    animation: moving 18s linear infinite;
+@media (min-width:768px) {
+
+    .text-update {
+        animation: moving 15s linear infinite;
+    }
 }
+
+@media (max-width:768px) {
+    
+    .text-update {
+        animation: moving 7.5s linear infinite;
+    }
+}
+
+
 
 .text-update span {
     padding-inline: 0.5rem;
