@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import '@/app/styles/home.css';
 import HeaderBar from "./components/HeaderBar";
 
 export default function Home() {

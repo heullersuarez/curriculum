@@ -1,17 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
+import '@/app/styles/headerBar.css';
+import { useEffect, useRef, useState } from 'react';
 
 export default function HeaderBar() {
 
-    const divRef = useRef();
-    const textRef = useRef();
+    const divRef = useRef(null);
+    const textRef = useRef(null);
     
     const [divWidth, setDivWidth] = useState(0);
     const [textWidth, setTextWidth] = useState(0);
 
-    const [dynamicText, setDynamicText] = useState('Desenvolvimento web / React / Node /');
+    const [dynamicText, setDynamicText] = useState(' Desenvolvimento web / React / Node /');
 
     useEffect(() => {
         if(divRef.current) {
@@ -22,25 +22,24 @@ export default function HeaderBar() {
             setTextWidth(textRef.current.offsetWidth);
         }
 
-        if(divWidth && textWidth){
-            const repeatText = divWidth / textWidth;
-            console.log(repeatText)
+        if(divRef.current && textRef.current){
+            console.log("aqui")
+            const repeatText = Math.floor(divWidth / textWidth);
+            let multiplicateText = dynamicText;
+
+            for (let index = 0; index < repeatText; index++) {
+                multiplicateText += dynamicText;
+            }
+            setDynamicText("oi")
         }
 
-        
-        {/*for (let index = 0; index < repeatText; index++) {
-            setDynamicText(dynamicText + dynamicText);
-        }*/}
     })
 
-    
     return (
-        <div className="bg-dark text-white overflow-x-hidden h-10 flex items-center">
-          <div className="text-update text-xl">
-              <div className="w-screen" ref={divRef}>
+        <div className="bg-dark text-white overflow-hidden whitespace-nowrap py-4 text-lg uppercase font-semibold text-end" ref={divRef}>
+            <p className="scroll-animation">
                 <span ref={textRef}>{dynamicText}</span>
-              </div> 
-          </div>
+            </p>
         </div>
     )
 }

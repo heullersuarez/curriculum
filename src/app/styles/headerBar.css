@@ -1,0 +1,12 @@
+.scroll-animation {
+    animation: scroll-news 10s linear infinite;
+}
+
+@keyframes scroll-news {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
