@@ -1,16 +1,18 @@
 .scroll-animation {
-    animation: scroll-news 10s linear infinite;
+    animation: scroll-news 15s linear infinite;
+    animation-delay: 2s;
 }
 
 @media (max-width:768px) {
     .scroll-animation {
         animation: scroll-news 7s linear infinite;
+        animation-delay: 2s;
     }
 }
 
 @keyframes scroll-news {
     from {
-        transform: translateX(0);
+        transform: translateX(100%);
     }
     to {
         transform: translateX(-100%);

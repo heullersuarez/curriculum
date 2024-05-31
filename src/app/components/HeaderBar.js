@@ -11,7 +11,7 @@ export default function HeaderBar() {
     const [divWidth, setDivWidth] = useState(0);
     const [textWidth, setTextWidth] = useState(0);
 
-    const initialText = 'Desenvolvimento web / React / Node /';
+    const initialText = ' Desenvolvimento web / React / Node /';
     const [dynamicText, setDynamicText] = useState(initialText);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ export default function HeaderBar() {
             setDivWidth(divRef.current.offsetWidth);
             setTextWidth(textRef.current.offsetWidth);
 
-            const repeatText = Math.floor(divWidth / textWidth);
+            const repeatText = Math.floor(divWidth / textWidth) -1;
             let multiplicateText = initialText;
 
             for (let index = 0; index < repeatText; index++) {
@@ -32,9 +32,10 @@ export default function HeaderBar() {
 
     return (
         <div className="bg-dark text-white overflow-hidden whitespace-nowrap inline-block" ref={divRef}>
-            <p className="scroll-animation py-4 text-lg uppercase font-semibold">
-                <span ref={textRef}>{dynamicText}</span>
-                <span ref={textRef}>{dynamicText}</span>
+            <p className="scroll-animation py-4 text-lg uppercase font-semibold text-center">
+                <span ref={textRef} className={textWidth ? "text-white": "text-black"}>
+                    {dynamicText}
+                </span>
             </p>
         </div>
     )
