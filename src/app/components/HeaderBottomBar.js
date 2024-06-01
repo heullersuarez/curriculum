@@ -1,6 +1,6 @@
 "use client";
 
-import '@/app/styles/headerBar.css';
+import '@/app/styles/headerBottomBar.css';
 import { useEffect, useRef, useState } from 'react';
 
 export default function HeaderBar() {
