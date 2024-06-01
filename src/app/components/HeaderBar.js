@@ -31,8 +31,11 @@ export default function HeaderBar() {
     }, [divWidth, textWidth])
 
     return (
-        <div className="bg-dark text-white overflow-hidden whitespace-nowrap inline-block" ref={divRef}>
-            <p className="scroll-animation py-4 text-lg uppercase font-semibold text-center">
+        <div className="bg-dark text-white overflow-hidden flex" ref={divRef}>
+            <p className="scroll-animation py-4 text-lg uppercase font-semibold text-center whitespace-nowrap">
+                <span ref={textRef} className={textWidth ? "text-white": "text-black"}>
+                    {dynamicText}
+                </span>
                 <span ref={textRef} className={textWidth ? "text-white": "text-black"}>
                     {dynamicText}
                 </span>
