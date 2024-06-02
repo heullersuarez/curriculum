@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       <header className="bg-light bg-opacity-50 h-screen w-screen flex flex-col text-dark">
         <LanguageBar/>
-        <div className="grow flex flex-col md:flex-row md:items-center justify-center gap-20 md:justify-evenly px-10 md:px-0">
+        <div className="grow flex flex-col md:flex-row md:items-center justify-center gap-20 md:justify-evenly px-10 py-4 md:px-0">
           <div className="flex flex-col justify-center">
             <p className="text-6xl md:text-8xl font-bold">Héuller</p>
             <p className="text-xl md:text-3xl font-extralight">Desenvolvedor web full-stack</p>
@@ -21,7 +21,7 @@ export default function Home() {
               <a href=""><FaGithub size={30}/></a>
             </div>
           </div>
-          <div className="w-48 h-48 md:w-72 md:h-72 relative">
+          <div className="w-40 h-40 md:w-72 md:h-72 relative">
             <Image
             src="/profile-pic.png"
             objectFit="cover"

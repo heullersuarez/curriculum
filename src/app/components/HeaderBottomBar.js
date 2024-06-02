@@ -25,22 +25,21 @@ export default function HeaderBar() {
             for (let index = 0; index < repeatText; index++) {
                 multiplicateText += initialText;
             }
-            console.log(multiplicateText)
+
             setDynamicText(multiplicateText)
         }
     }, [divWidth, textWidth])
 
     return (
         <div className="bg-dark text-white overflow-hidden flex" ref={divRef}>
-            <p className="scroll-animation py-4 text-lg uppercase font-semibold text-center whitespace-nowrap">
+            <p className="scroll-animation py-4 text-sm  md:text-lg uppercase font-semibold text-center whitespace-nowrap">
                 <span ref={textRef} className={textWidth ? "text-white": "text-black"}>
                     {dynamicText}
                 </span>
                 <span ref={textRef} className={textWidth ? "text-white": "text-black"}>
-                    {dynamicText}
+                    {dynamicText.slice(0,-1)}
                 </span>
             </p>
         </div>
     )
 }
-
