@@ -1,7 +1,7 @@
 "use client";
 
-import '@/app/styles/headerBottomBar.css';
 import { useEffect, useRef, useState } from 'react';
+import { motion } from "framer-motion";
 
 export default function HeaderBar() {
 
@@ -32,14 +32,15 @@ export default function HeaderBar() {
 
     return (
         <div className="bg-dark text-white overflow-hidden flex" ref={divRef}>
-            <p className="scroll-animation py-4 text-sm  md:text-lg uppercase font-semibold text-center whitespace-nowrap">
-                <span ref={textRef} className={textWidth ? "text-white": "text-black"}>
-                    {dynamicText}
-                </span>
-                <span ref={textRef} className={textWidth ? "text-white": "text-black"}>
-                    {dynamicText.slice(0,-1)}
-                </span>
-            </p>
+             <motion.div
+                animate={{ x: ['100vw', '10vw', '-100vw'] }}
+                transition={{ ease: "backOut", duration: 10, repeat: Infinity }}>
+                <p className="py-4 text-sm  md:text-lg uppercase font-semibold text-end whitespace-nowrap  w-full">
+                    <span ref={textRef} className={textWidth ? "text-white": "text-black"}>
+                        {dynamicText.slice(0,-1)}
+                    </span>
+                </p>
+            </motion.div>
         </div>
     )
 }

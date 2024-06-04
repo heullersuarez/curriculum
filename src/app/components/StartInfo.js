@@ -15,10 +15,25 @@ export default function StartInfo(){
                 <div className="pt-5">
                     <p className="text-6xl md:text-8xl font-bold">Héuller</p>
                     <p className="text-xl md:text-3xl font-extralight">Desenvolvedor web full-stack</p>
-                    <div className="pt-8 flex gap-6 social-icons">
-                        <a href=""><FaLinkedin size={30}/></a>
-                        <a href=""><FaInstagram size={30}/></a>
-                        <a href=""><FaGithub size={30}/></a>
+                    <div className="pt-8 flex gap-6">
+                        <motion.a
+                            whileHover={{ scale: 1.2 }}
+                            onHoverStart={e => {}}
+                            onHoverEnd={e => {}}>
+                                <FaLinkedin size={30}/>
+                        </motion.a>
+                        <motion.a
+                            whileHover={{ scale: 1.2 }}
+                            onHoverStart={e => {}}
+                            onHoverEnd={e => {}}>
+                                <FaInstagram size={30}/>
+                        </motion.a>
+                        <motion.a
+                            whileHover={{ scale: 1.2 }}
+                            onHoverStart={e => {}}
+                            onHoverEnd={e => {}}>
+                                <FaGithub size={30}/>
+                        </motion.a> 
                     </div>
                 </div>
                 </motion.div>

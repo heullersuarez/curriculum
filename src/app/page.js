@@ -1,10 +1,6 @@
 import BottomBar from "./components/HeaderBottomBar";
 import LanguageBar from "./components/HeaderLanguageBar";
-
-import '@/app/styles/headerSocialIcons.css';
 import AboutMe from "./components/AboutMe";
-
-
 import StartInfo from "./components/StartInfo";
 
 
