@@ -4,6 +4,10 @@
 
 @layer components {
   .btn-language {
-    @apply px-3 font-bold text-black hover:text-opacity-80
+    @apply px-3 font-bold text-black text-opacity-60 hover:text-opacity-40
+  }
+
+  .active-language {
+    @apply text-opacity-100
   }
 }
