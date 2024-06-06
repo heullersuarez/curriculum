@@ -14,7 +14,9 @@ export default function Home() {
       </header>
       <div className="h-screen">
         <AboutMe/>
-        <section></section>
+        <section
+        className="h-screen bg-dark"
+        ></section>
       </div>
     </main>
   );

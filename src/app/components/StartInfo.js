@@ -13,25 +13,28 @@ export default function StartInfo(){
                     animate={{ opacity: 1, y: -20 }}
                     transition={{ ease: "easeOut", duration: 1 }}>
                 <div className="pt-5">
-                    <p className="text-6xl md:text-8xl font-bold">Héuller</p>
-                    <p className="text-xl md:text-3xl font-extralight">Desenvolvedor web full-stack</p>
+                    <h1 className="text-6xl md:text-8xl font-bold">Héuller</h1>
+                    <h2 className="text-xl md:text-3xl font-extralight">Desenvolvedor web full-stack</h2>
                     <div className="pt-8 flex gap-6">
                         <motion.a
                             whileHover={{ scale: 1.2 }}
                             onHoverStart={e => {}}
-                            onHoverEnd={e => {}}>
+                            onHoverEnd={e => {}}
+                            className="cursor-pointer">
                                 <FaLinkedin size={30}/>
                         </motion.a>
                         <motion.a
                             whileHover={{ scale: 1.2 }}
                             onHoverStart={e => {}}
-                            onHoverEnd={e => {}}>
+                            onHoverEnd={e => {}}
+                            className="cursor-pointer">
                                 <FaInstagram size={30}/>
                         </motion.a>
                         <motion.a
                             whileHover={{ scale: 1.2 }}
                             onHoverStart={e => {}}
-                            onHoverEnd={e => {}}>
+                            onHoverEnd={e => {}}
+                            className="cursor-pointer">
                                 <FaGithub size={30}/>
                         </motion.a> 
                     </div>
