@@ -15,7 +15,7 @@ export default function Home() {
       <div className="h-screen">
         <AboutMe/>
         <section
-        className="h-screen bg-dark"
+          className="h-screen bg-dark"
         ></section>
       </div>
     </main>

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 export default function StartInfo(){
@@ -15,29 +14,6 @@ export default function StartInfo(){
                 <div className="pt-5">
                     <h1 className="text-6xl md:text-8xl font-bold">Héuller</h1>
                     <h2 className="text-xl md:text-3xl font-extralight">Desenvolvedor web full-stack</h2>
-                    <div className="pt-8 flex gap-6">
-                        <motion.a
-                            whileHover={{ scale: 1.2 }}
-                            onHoverStart={e => {}}
-                            onHoverEnd={e => {}}
-                            className="cursor-pointer">
-                                <FaLinkedin size={30}/>
-                        </motion.a>
-                        <motion.a
-                            whileHover={{ scale: 1.2 }}
-                            onHoverStart={e => {}}
-                            onHoverEnd={e => {}}
-                            className="cursor-pointer">
-                                <FaInstagram size={30}/>
-                        </motion.a>
-                        <motion.a
-                            whileHover={{ scale: 1.2 }}
-                            onHoverStart={e => {}}
-                            onHoverEnd={e => {}}
-                            className="cursor-pointer">
-                                <FaGithub size={30}/>
-                        </motion.a> 
-                    </div>
                 </div>
                 </motion.div>
             </div>
