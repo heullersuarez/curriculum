@@ -8,7 +8,7 @@ export default function AboutMe() {
     const xPosition = useTransform(scrollYProgress, [0,0.5], ['0%', '30%']);
 
     return (
-        <section className="h-1/2 bg-light overflow-x-hidden flex justify-end relative">
+        <section className="h-[50vh] bg-light overflow-x-hidden flex justify-end relative">
             <motion.div 
                 style={{ x: xPosition }}
                 className="text-4xl md:text-8xl uppercase font-bold text-dark text-opacity-10 

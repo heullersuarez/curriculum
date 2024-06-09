@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 
-export default function HeaderBar() {
+export default function BottomBar() {
 
     const divRef = useRef(null);
     const textRef = useRef(null);
@@ -33,7 +33,7 @@ export default function HeaderBar() {
     return (
         <div className="bg-dark text-white overflow-hidden flex" ref={divRef}>
              <motion.div
-                animate={{ x: ['100vw', '20vw', '-100vw'] }}
+                animate={{ x: ['100vw', '5vw', '-105vw'] }}
                 transition={{ ease: "backOut", duration: 15, repeat: Infinity }}>
                 <p className="py-4 text-sm  md:text-lg uppercase font-semibold text-end whitespace-nowrap  w-full">
                     <span ref={textRef} className={textWidth ? "text-white": "text-black"}>
