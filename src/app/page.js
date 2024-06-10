@@ -9,6 +9,9 @@ export default function Home() {
       <Header/>
       <AboutMe/>
       <Projects/>
+      <div className="h-screen bg-light">
+
+      </div>
     </main>
   );
 }
