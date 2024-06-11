@@ -1,6 +1,6 @@
-import AboutMe from "./views/AboutMe";
-import Projects from "./views/Projects";
-import Header from "./views/Header";
+import AboutMe from "./sections/AboutMe";
+import Projects from "./sections/Projects";
+import Header from "./sections/Header";
 
 
 export default function Home() {
@@ -9,9 +9,6 @@ export default function Home() {
       <Header/>
       <AboutMe/>
       <Projects/>
-      <div className="h-screen bg-light">
-
-      </div>
     </main>
   );
 }
