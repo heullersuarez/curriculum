@@ -13,7 +13,7 @@ export default function AboutMe() {
                 style={{ x: xPosition }}
                 className="text-4xl md:text-8xl uppercase font-bold text-dark text-opacity-10 
                 absolute left-0 flex md:items-center h-full w-full">
-                    <p className="pt-10 md:pt-0">Sobre mim</p>
+                    <h3 className="pt-10 md:pt-0">Sobre mim</h3>
             </motion.div>
             <div className="h-full w-10/12 md:w-1/2 flex items-center">
                 <p className="w-full p-2 md:p-12 text-sm md:text-xl">

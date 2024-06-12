@@ -10,7 +10,7 @@ export default function StartInfo(){
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, y: -20 }}
-                    transition={{ ease: "easeOut", duration: 1 }}>
+                    transition={{ ease: "easeOut", duration: 1, delay: 0 }}>
                 <div className="pt-5">
                     <h1 className="text-6xl md:text-8xl font-bold">Héuller</h1>
                     <h2 className="text-xl md:text-3xl font-extralight">Desenvolvedor web full-stack</h2>
