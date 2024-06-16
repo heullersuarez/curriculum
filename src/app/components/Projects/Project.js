@@ -9,18 +9,16 @@ export default function Project(props) {
     
     const { scrollYProgress } = useScroll();
 
-    console.log(props);
-
-    const text = "Consequat cillum nisi deserunt veniam.Tempor irure nulla ullamco nostrud ullamco in minim voluptate fugiat adipisicing enim consequat.".split(" ");
+    const text = props.description.split(" ");
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
 
     const isMobile = useMediaQuery('(max-width: 768px)');
 
-    const yPosition = !isMobile ? 
-    useTransform(scrollYProgress, [0,1], ['10%', '-50%'], {ease: anticipate}) : 
-    useTransform(scrollYProgress, [0,1], ['10%', '-30%'], {ease: anticipate}); // Different y values for mobile and desktop
-
+    const yPosition = isMobile ? 
+    useTransform(scrollYProgress, [0,(1 + (props.id * 0.5))], ['0%', '-100%'], {ease: anticipate}): // Different y values for mobile and desktop
+    useTransform(scrollYProgress, [0,(1 + (props.id * 0.5))], ['30%', '-100%'], {ease: anticipate});
+    
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -50,8 +48,8 @@ export default function Project(props) {
             <div className="md:h-full md:grid md:grid-rows-2">
                 <div className="flex flex-col md:justify-end items-end text-white">
                     <div className="p-4 md:p-0 md:w-8/12">
-                        <h3 className="text-2xl py-10 md:pt-0 md:text-5xl uppercase font-black">Shape progress</h3>
-                            <p className="text-lg pb-10 uppercase font-black">Dolor enim • laboris ipsum</p>
+                        <h3 className="text-2xl py-10 md:pt-0 md:text-5xl uppercase font-black">{props.title}</h3>
+                            <p className="md:text-lg pb-10 uppercase font-black">{props.tags}</p>
                             {text.map((el, i) => (
                             <motion.span 
                                 ref={ref}
@@ -62,7 +60,7 @@ export default function Project(props) {
                                 delay: i / 8,
                                 }}
                                 key={i}
-                                className="text-lg">
+                                className="md:text-lg">
                                 {el}{" "}
                             </motion.span>
                         ))}
@@ -74,7 +72,7 @@ export default function Project(props) {
                 className="absolute bottom-0 left-4"
                 style={{ y: yPosition }}>
                     <Image
-                        src="/project.png"
+                        src={props.image1}
                         width={300}
                         height={300}
                         className="w-8/12 md:w-auto"
@@ -86,7 +84,7 @@ export default function Project(props) {
                 className="absolute bottom-0 left-1/2"
                 style={{ y: yPosition }}>
                     <Image
-                        src="/project.png"
+                        src={props.image2}
                         width={200}
                         height={200}
                         className="w-8/12 md:w-auto"
