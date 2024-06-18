@@ -1,7 +1,6 @@
 "use client";
 
-import useMediaQuery from "@/app/hooks/useMediaQuery";
-import { anticipate, backInOut, backOut, circIn, circOut, easeIn, easeOut, motion, useScroll, useTransform } from "framer-motion";
+import { anticipate, motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -13,11 +12,8 @@ export default function Project(props) {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
 
-    const isMobile = useMediaQuery('(max-width: 768px)');
+    const yPosition = useTransform(scrollYProgress, [0,(1 + (props.id * 0.5))], ['30%', '-100%'], {ease: anticipate});
 
-    const yPosition = isMobile ? 
-    useTransform(scrollYProgress, [0,(1 + (props.id * 0.5))], ['0%', '-100%'], {ease: anticipate}): // Different y values for mobile and desktop
-    useTransform(scrollYProgress, [0,(1 + (props.id * 0.5))], ['30%', '-100%'], {ease: anticipate});
     
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -46,7 +42,7 @@ export default function Project(props) {
     return (
         <div className={`${props.background} h-screen flex flex-col md:grid md:grid-cols-2`}>
             <div className="md:h-full md:grid md:grid-rows-2">
-                <div className="flex flex-col md:justify-end items-end text-white">
+                <div className={`flex flex-col md:justify-end items-end ${props.color}`}>
                     <div className="p-4 md:p-0 md:w-8/12">
                         <h3 className="text-2xl py-10 md:pt-0 md:text-5xl uppercase font-black">{props.title}</h3>
                             <p className="md:text-lg pb-10 uppercase font-black">{props.tags}</p>

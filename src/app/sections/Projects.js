@@ -7,7 +7,7 @@ export default function Projects() {
     return (
         <section>
             <h2 className="p-10
-            bg-dark
+            bg-dark bg-opacity-90
             text-3xl md:text-6xl uppercase font-bold text-light text-center">
                 Projetos
             </h2>
@@ -19,7 +19,7 @@ export default function Projects() {
             consequat."
             image1="/project.png"
             image2="/project.png"
-            background="bg-primary" id="0"/>
+            background="bg-light" color="text-dark" id="0"/>
             <Project 
             title="Delivery"
             tags="Dolor enim • laboris ipsum"
@@ -28,7 +28,7 @@ export default function Projects() {
             consequat."
             image1="/project.png"
             image2="/project.png"
-            background="bg-dark" id="1"/>
+            background="bg-dark bg-opacity-90" color="text-white" id="1"/>
         </section>
     );
 }
