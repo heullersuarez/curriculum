@@ -9,16 +9,16 @@ import Image from "next/image";
 export default function Contact() {
 
     return (
-        <section className="bg-light relative overflow-hidden min-h-[50vh] flex flex-col gap-5 justify-center items-center
-        border-solid border-t-2 border-dark border-opacity-10">
+        <section 
+            className="bg-light relative overflow-hidden min-h-[50vh] flex flex-col gap-5 justify-center items-center
+            border-solid border-t-2 border-dark border-opacity-10">
             <h3 className="text-4xl md:text-8xl uppercase font-bold text-dark text-opacity-10">Contato</h3>
                 <Image
-                    className="absolute top-0 right-1/4 scale-x-[-1]"
+                    className="absolute top-0 right-1/4 scale-x-[-1] w-[80px] md:w-auto"
                     src="/memphis_1.png"
                     width={150}
                     height={150}
-                    alt="Picture of the author"
-                >
+                    alt="Picture of the author">
                 </Image>
             <div className="flex gap-3">
                 <motion.a

@@ -11,20 +11,19 @@ export default function StartInfo(){
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, y: -20 }}
                     transition={{ ease: "easeOut", duration: 1, delay: 0 }}>
-                <div className="pt-5">
-                    <h1 className="text-6xl md:text-8xl font-bold">Héuller</h1>
-                    <h2 className="text-xl md:text-3xl font-extralight">Desenvolvedor web full-stack</h2>
-                </div>
+                    <div className="pt-5">
+                        <h1 className="text-6xl md:text-8xl font-bold">Héuller</h1>
+                        <h2 className="text-xl md:text-3xl font-extralight">Desenvolvedor web full-stack</h2>
+                    </div>
                 </motion.div>
             </div>
             <div className="w-40 h-40 md:w-72 md:h-72 relative">
                 <Image
                     className="w-full h-full"
-                    src="/profile-pic.png"
+                    src="/profile_picture.png"
                     width={300}
                     height={300}
-                    alt="Picture of the author"
-                >
+                    alt="Picture of the author">
                 </Image>
             </div>
         </div>

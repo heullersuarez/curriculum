@@ -35,7 +35,7 @@ export default function BottomBar() {
              <motion.div
                 animate={{ x: ['100vw', '5vw', '-105vw'] }}
                 transition={{ ease: "backOut", duration: 15, repeat: Infinity }}>
-                <p className="py-4 text-sm  md:text-lg uppercase font-semibold text-end whitespace-nowrap  w-full">
+                <p className="py-4 text-sm  md:text-lg uppercase font-semibold text-end whitespace-nowrap w-full">
                     <span ref={textRef} className={textWidth ? "text-white": "text-black"}>
                         {dynamicText.slice(0,-1)}
                     </span>

@@ -14,7 +14,6 @@ export default function Project(props) {
 
     const yPosition = useTransform(scrollYProgress, [0,(1 + (props.id * 0.5))], ['30%', '-100%'], {ease: anticipate});
 
-    
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -65,20 +64,19 @@ export default function Project(props) {
             </div>
             <div className="h-full relative">
                 <motion.div
-                className="absolute bottom-0 left-4"
-                style={{ y: yPosition }}>
+                    className="absolute bottom-0 left-4"
+                    style={{ y: yPosition }}>
                     <Image
                         src={props.image1}
                         width={300}
                         height={300}
                         className="w-8/12 md:w-auto"
-                        alt="Picture of the author"
-                    >
+                        alt="Picture of the author">
                     </Image>
                 </motion.div>
                 <motion.div
-                className="absolute bottom-0 left-1/2"
-                style={{ y: yPosition }}>
+                    className="absolute bottom-0 left-1/2"
+                    style={{ y: yPosition }}>
                     <Image
                         src={props.image2}
                         width={200}
