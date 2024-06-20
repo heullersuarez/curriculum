@@ -14,10 +14,10 @@ export default function Contact() {
             border-solid border-t-2 border-dark border-opacity-10">
             <h3 className="text-4xl md:text-8xl uppercase font-bold text-dark text-opacity-10">Contato</h3>
                 <Image
-                    className="absolute top-0 right-1/4 scale-x-[-1] w-[80px] md:w-auto"
+                    className="absolute top-0 right-1/4 scale-x-[-1] w-[80px]"
                     src="/memphis_1.png"
-                    width={150}
-                    height={150}
+                    width={100}
+                    height={100}
                     alt="Picture of the author">
                 </Image>
             <div className="flex gap-3">
