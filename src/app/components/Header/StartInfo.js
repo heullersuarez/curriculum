@@ -19,9 +19,10 @@ export default function StartInfo(){
             </div>
             <div className="w-40 h-40 md:w-72 md:h-72 relative">
                 <Image
+                    className="w-full h-full"
                     src="/profile-pic.png"
-                    objectFit="cover"
-                    layout="fill"
+                    width={300}
+                    height={300}
                     alt="Picture of the author"
                 >
                 </Image>
