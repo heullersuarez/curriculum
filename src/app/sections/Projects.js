@@ -9,7 +9,7 @@ export default function Projects() {
         <section>
             <div className="relative">
                 <h2 className="p-10
-                bg-dark bg-opacity-90
+                bg-dark
                 text-3xl md:text-6xl uppercase font-bold text-light text-center">
                     Projetos
                 </h2>
