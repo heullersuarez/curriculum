@@ -13,13 +13,6 @@ export default function Projects() {
                 text-3xl md:text-6xl uppercase font-bold text-light text-center">
                     Projetos
                 </h2>
-                <Image
-                    className="absolute top-0 right-1/4 scale-x-[-1] w-[80px] md:w-auto"
-                    src="/memphis_0.png"
-                    width={100}
-                    height={100}
-                    alt="Picture of the author">
-                </Image>
             </div>
             <Project 
                 title="Shape progress"
