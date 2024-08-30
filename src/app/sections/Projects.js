@@ -1,26 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import Project from "../components/Projects/Project";
 
 export default function Projects() {
     
     return (
         <section>
-            <div className="relative">
-                <h2 className="p-10
-                bg-dark bg-opacity-90
-                text-3xl md:text-6xl uppercase font-bold text-light text-center">
-                    Projetos
-                </h2>
-                <Image
-                    className="absolute top-0 right-1/4 scale-x-[-1] w-[80px] md:w-auto"
-                    src="/memphis_0.png"
-                    width={100}
-                    height={100}
-                    alt="Picture of the author">
-                </Image>
-            </div>
+            <h2 className="p-10
+            bg-dark bg-opacity-90
+            text-3xl md:text-6xl uppercase font-bold text-light text-center">
+                Projetos
+            </h2>
             <Project 
                 title="Shape progress"
                 tags="Dolor enim • laboris ipsum"
@@ -29,7 +19,7 @@ export default function Projects() {
                 consequat."
                 image1="/project.png"
                 image2="/project.png"
-                background="bg-light" color="text-dark" id="0"/>
+                background="bg-light" color="text-dark"/>
             <Project 
                 title="Delivery"
                 tags="Dolor enim • laboris ipsum"
@@ -38,7 +28,7 @@ export default function Projects() {
                 consequat."
                 image1="/project.png"
                 image2="/project.png"
-                background="bg-dark bg-opacity-90" color="text-white" id="1"/>
+                background="bg-dark bg-opacity-90" color="text-white"/>
         </section>
     );
 }

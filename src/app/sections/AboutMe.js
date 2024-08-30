@@ -16,9 +16,8 @@ export default function AboutMe() {
                     <h3 className="pt-10 md:pt-0">Sobre mim</h3>
             </motion.div>
             <div className="h-full w-10/12 md:w-1/2 flex items-center">
-                <p className="w-full p-2 md:p-12 text-sm md:text-xl">
-                    Proident enim occaecat commodo dolore officia eu amet.
-                    Proident enim occaecat commodo dolore officia eu amet.
+                <p className="w-full p-2 text-xs md:p-12 md:text-2xl">
+                    Desenvolver aplicações simples e eficientes sem deixar o design e a experiência do usuário de lado é o que me motiva.
                 </p>
             </div>
         </section>

@@ -11,7 +11,7 @@ export default function BottomBar() {
     const [divWidth, setDivWidth] = useState(0);
     const [textWidth, setTextWidth] = useState(0);
 
-    const initialText = ' Desenvolvimento web / React / Node /';
+    const initialText = ' Desenvolvimento mobile / React Native / Node JS /';
     const [dynamicText, setDynamicText] = useState(initialText);
 
     useEffect(() => {
