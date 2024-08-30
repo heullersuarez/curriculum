@@ -17,12 +17,12 @@ export default function Skills() {
             </motion.div>
             <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-20 pt-20 md:pt-0">
                 <div className="text-center font-bold text-lg">
-                    <p>Design system</p> {/* design de sistemas, comunicação visual, soluções simples e minimalistas */}
-                    <p>Visual communication</p>
-                    <p>Simple and minimalist solutions</p>
+                    <p>Design de sistemas (UI)</p> {/* design de sistemas, comunicação visual, soluções simples e minimalistas */}
+                    <p>Experiência do usuário (UX) </p>
+                    <p>Soluções eficientes e minimalistas</p>
                 </div>
                 <div className="text-center font-bold text-lg">
-                    <p>HTML & CSS</p>
+                    <p>React Native</p>
                     <p>React</p>
                     <p>Node JS</p>
                     <p>Figma</p>

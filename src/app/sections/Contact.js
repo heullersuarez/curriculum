@@ -25,14 +25,16 @@ export default function Contact() {
                   whileHover={{ scale: 1.2 }}
                   onHoverStart={e => {}}
                   onHoverEnd={e => {}}
-                  href="#">
+                  href="https://github.com/heullersuarez"
+                  target="_blank">
                     <FaGithub className="text-6xl md:text-7xl"/>
                 </motion.a>
                 <motion.a
                   whileHover={{ scale: 1.2 }}
                   onHoverStart={e => {}}
                   onHoverEnd={e => {}}
-                  href="#">
+                  href="https://www.linkedin.com/in/heuller-soares/"
+                  target="_blank">
                     <FaLinkedin className="text-6xl md:text-7xl"/>
                 </motion.a>
             </div>
