@@ -1,6 +1,6 @@
 "use client";
 
-import { anticipate, motion, useScroll, useTransform } from "framer-motion";
+import { anticipate, easeOut, motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -12,31 +12,24 @@ export default function Project(props) {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
 
-    const yPosition = useTransform(scrollYProgress, [0,(1 + (props.id * 0.5))], ['30%', '-100%'], {ease: anticipate});
+    const yPosition = useTransform(scrollYProgress, [0,1], ['30%', '-20%'], {ease: anticipate});
+
+      // Function to check if the component is visible on the screen
+    const handleScroll = () => {
+        if (ref.current) {
+            const rect = ref.current.getBoundingClientRect();
+            setIsVisible(rect.top >= 0 && rect.bottom <= window.innerHeight);
+        }
+    };
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            {
-                threshold: 0.1, // Adjust this value as needed
-            }
-        );
-
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Initial check
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
-            }
+        window.removeEventListener("scroll", handleScroll);
         };
     }, []);
-
 
     return (
         <div className={`${props.background} h-screen flex flex-col md:grid md:grid-cols-2`}>
