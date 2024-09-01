@@ -4,6 +4,8 @@ import { anticipate, easeOut, motion, useScroll, useTransform } from "framer-mot
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
+import "@/app/assets/styles/project.css";
+
 export default function Project(props) {
     
     const { scrollYProgress } = useScroll();
@@ -12,7 +14,7 @@ export default function Project(props) {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
 
-    const yPosition = useTransform(scrollYProgress, [0,1], ['30%', '-20%'], {ease: anticipate});
+    const yPosition = useTransform(scrollYProgress, [0,1], ['10%', '-40%'], {ease: anticipate});
 
       // Function to check if the component is visible on the screen
     const handleScroll = () => {
@@ -55,16 +57,15 @@ export default function Project(props) {
                     </div>
                 </div>
             </div>
-            <div className="h-full relative">
+            <div className="relative container-image">
                 <motion.div
                     className="absolute bottom-0 left-4"
                     style={{ y: yPosition }}>
                     <Image
                         src={props.image1}
-                        width={300}
-                        height={300}
-                        className="w-8/12 md:w-auto"
-                        alt="Picture of the author">
+                        width={1080}
+                        height={1080}
+                        alt="Login page of system matchday">
                     </Image>
                 </motion.div>
                 <motion.div
@@ -72,10 +73,9 @@ export default function Project(props) {
                     style={{ y: yPosition }}>
                     <Image
                         src={props.image2}
-                        width={200}
-                        height={200}
-                        className="w-8/12 md:w-auto"
-                        alt="Picture of the author">
+                        width={1080}
+                        height={1080}
+                        alt="Splash screen of system matchday">
                     </Image>
                 </motion.div>
             </div>
