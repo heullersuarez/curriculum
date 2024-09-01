@@ -17,12 +17,13 @@ export default function StartInfo(){
                     </div>
                 </motion.div>
             </div>
-            <div className="w-40 h-40 md:w-72 md:h-72 relative">
+            <div className="w-56 h-56 md:w-80 md:h-80 relative">
                 <Image
                     className="w-full h-full"
                     src="/profile_picture.png"
-                    width={300}
-                    height={300}
+                    width={715}
+                    height={715}
+                    style={{objectFit: 'cover'}}
                     alt="Picture of the author">
                 </Image>
             </div>
