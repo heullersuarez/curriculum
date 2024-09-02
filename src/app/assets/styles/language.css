@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.buttonLanguage {
+    @apply px-3 font-bold text-black text-opacity-60 hover:text-opacity-40
+}
+
+.activeLanguage {
+    @apply text-opacity-100
+}

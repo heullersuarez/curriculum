@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion";
@@ -33,8 +33,8 @@ export default function BottomBar() {
     return (
         <div className="bg-dark text-white overflow-hidden flex" ref={divRef}>
              <motion.div
-                animate={{ x: ['100vw', '5vw', '-105vw'] }}
-                transition={{ ease: "backOut", duration: 15, repeat: Infinity }}>
+                animate={{ x: ['100vw', '2vw', '-100vw'] }}
+                transition={{ ease: "easeOut", duration: 12, repeat: Infinity }}>
                 <p className="py-4 text-sm  md:text-lg uppercase font-semibold text-end whitespace-nowrap w-full">
                     <span ref={textRef} className={textWidth ? "text-white": "text-black"}>
                         {dynamicText.slice(0,-1)}

@@ -1,3 +1,5 @@
+"use client";
+
 import BottomBar from "../components/Header/BottomBar";
 import LanguageBar from "../components/Header/LanguageBar";
 import StartInfo from "../components/Header/StartInfo";
