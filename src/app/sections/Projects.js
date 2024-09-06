@@ -3,7 +3,6 @@
 import Project from "../components/Projects/Project";
 import { useSelector } from "react-redux";
 
-
 export default function Projects() {
 
     const language = useSelector((state) => state.languageSlice.value);

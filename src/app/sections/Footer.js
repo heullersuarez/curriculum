@@ -17,7 +17,6 @@ export default function Footer(){
                     `Direitos autorais © ${year} - Todos os direitos reservados por Héuller`:
                     `Copyright © ${year} - All right reserved by Héuller`
                 }
-            
         </div>
     );
 }

@@ -8,11 +8,8 @@ export default function BottomBar() {
     const initialText = ' Desenvolvimento mobile / React Native / Node JS /';
     const initialTextEN = ' Mobile development / React Native / Node JS /';
     const [dynamicText, setDynamicText] = useState(initialText);
-
     const language = useSelector((state) => state.languageSlice.value);
-
     const [isMounted, setIsMounted] = useState(false);
-
     const [windowWidth, setWindowWidth] = useState(0);
 
     useEffect(() => {

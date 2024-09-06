@@ -3,12 +3,10 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useSelector } from "react-redux";
 
-
 export default function Skills() {
 
     const { scrollYProgress } = useScroll();
     const xPosition = useTransform(scrollYProgress, [0.7,1], ['20%', '10%']);
-
     const language = useSelector((state) => state.languageSlice.value);
 
     return (

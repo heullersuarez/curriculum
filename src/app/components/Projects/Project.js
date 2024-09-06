@@ -1,6 +1,6 @@
 "use client";
 
-import { anticipate, easeOut, motion, useScroll, useTransform } from "framer-motion";
+import { anticipate, motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -11,16 +11,12 @@ import "@/app/assets/styles/project.css";
 export default function Project(props) {
     
     const { scrollYProgress } = useScroll();
-
     const [isVisible, setIsVisible] = useState(false);
     const refProjectPT = useRef(null);
     const refProjectEN = useRef(null);
-
     const yPosition = useTransform(scrollYProgress, [0,1], ['10%', '-40%'], {ease: anticipate});
-
     const language = useSelector((state) => state.languageSlice.value);
 
-    // Function to check if the component is visible on the screen
     const handleScroll = () => {
         let rect = null;
         if (refProjectPT.current !== null)
@@ -30,16 +26,16 @@ export default function Project(props) {
             rect = refProjectEN.current.getBoundingClientRect();
         
         setIsVisible(rect.top >= 0 && rect.bottom <= window.innerHeight);
-        }
+    }
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
-        handleScroll(); // Initial check
+        handleScroll();
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    });
 
     return (
         <div className={`${props.background} h-screen flex flex-col md:grid md:grid-cols-2`}>
