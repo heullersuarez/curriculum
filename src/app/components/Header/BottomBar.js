@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 
 import { useSelector } from "react-redux";
@@ -6,27 +6,36 @@ import { useSelector } from "react-redux";
 export default function BottomBar() {
 
     const initialText = ' Desenvolvimento mobile / React Native / Node JS /';
+    const initialTextEN = ' Mobile development / React Native / Node JS /';
     const [dynamicText, setDynamicText] = useState(initialText);
 
     const language = useSelector((state) => state.languageSlice.value);
 
     const [isMounted, setIsMounted] = useState(false);
 
+    const [windowWidth, setWindowWidth] = useState(0);
+
     useEffect(() => {
+        const windowWidthSize = window.innerWidth;
+        setWindowWidth(windowWidthSize);
 
-            const windowWidthSize = window.innerWidth;
+        const repeatText = Math.floor(windowWidthSize / 400) -1;
+        let multiplicateText = "";
 
-            const repeatText = Math.floor(windowWidthSize / 400) -1;
-            let multiplicateText = initialText;
+        if(language == "PT")
+             multiplicateText = initialText;
+        else
+            multiplicateText = initialTextEN;
 
-            for (let index = 0; index < repeatText; index++) {
-                multiplicateText += initialText;
-            }
+        for (let index = 0; index < repeatText; index++) {
+            multiplicateText += initialText;
+        }
 
-            setDynamicText(multiplicateText);
-      }, []);
+        setDynamicText(multiplicateText);
 
-      useEffect(() => {
+      }, [windowWidth]);
+
+    useEffect(() => {
 
         if(isMounted){
             if(language == "EN")
@@ -37,14 +46,26 @@ export default function BottomBar() {
         else{
             setIsMounted(true);
         }
+    
+    }, [language])
 
-        
-      }, [language])
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+      
+        window.addEventListener('resize', handleResize);
+      
+        return () => {
+            window.removeEventListener('resize',  
+                handleResize);
+            };
+    })
 
     return (
         <div className="bg-dark text-white overflow-hidden flex">
              <motion.div
-                animate={{ x: ['100vw', '-100vw'] }}
+                animate={{ x: ['100vw', '-115vw'] }}
                 transition={{ ease: "easeInOut", duration: 14, repeat: Infinity }}>
                 <p className="py-4 text-sm uppercase font-semibold text-end whitespace-nowrap w-full">
                     <span>
