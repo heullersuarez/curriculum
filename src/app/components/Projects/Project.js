@@ -4,32 +4,40 @@ import { anticipate, easeOut, motion, useScroll, useTransform } from "framer-mot
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
+import { useSelector } from "react-redux";
+
 import "@/app/assets/styles/project.css";
 
 export default function Project(props) {
     
     const { scrollYProgress } = useScroll();
 
-    const text = props.description.split(" ");
     const [isVisible, setIsVisible] = useState(false);
-    const ref = useRef(null);
+    const refProjectPT = useRef(null);
+    const refProjectEN = useRef(null);
 
     const yPosition = useTransform(scrollYProgress, [0,1], ['10%', '-40%'], {ease: anticipate});
 
-      // Function to check if the component is visible on the screen
+    const language = useSelector((state) => state.languageSlice.value);
+
+    // Function to check if the component is visible on the screen
     const handleScroll = () => {
-        if (ref.current) {
-            const rect = ref.current.getBoundingClientRect();
-            setIsVisible(rect.top >= 0 && rect.bottom <= window.innerHeight);
+        let rect = null;
+        if (refProjectPT.current !== null)
+            rect = refProjectPT.current.getBoundingClientRect();
+        
+        else
+            rect = refProjectEN.current.getBoundingClientRect();
+        
+        setIsVisible(rect.top >= 0 && rect.bottom <= window.innerHeight);
         }
-    };
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         handleScroll(); // Initial check
 
         return () => {
-        window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
@@ -40,9 +48,9 @@ export default function Project(props) {
                     <div className="p-4 md:p-0 md:w-8/12">
                         <h3 className="text-2xl py-10 md:pt-0 md:text-5xl uppercase font-black">{props.title}</h3>
                             <p className="md:text-lg pb-10 uppercase font-black">{props.tags}</p>
-                            {text.map((el, i) => (
+                            {props.description.split(" ").map((el, i) => (
                             <motion.span 
-                                ref={ref}
+                                ref={language == "PT" ? refProjectPT: refProjectEN}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: isVisible ? 1 : 0 }}
                                 transition={{

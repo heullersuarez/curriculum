@@ -1,42 +1,53 @@
-// "use client";
-
 import { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 
-export default function BottomBar() {
+import { useSelector } from "react-redux";
 
-    const divRef = useRef(null);
-    const textRef = useRef(null);
-    
-    const [divWidth, setDivWidth] = useState(0);
-    const [textWidth, setTextWidth] = useState(0);
+export default function BottomBar() {
 
     const initialText = ' Desenvolvimento mobile / React Native / Node JS /';
     const [dynamicText, setDynamicText] = useState(initialText);
 
-    useEffect(() => {
-        if(divRef.current && textRef.current) {
-            setDivWidth(divRef.current.offsetWidth);
-            setTextWidth(textRef.current.offsetWidth);
+    const language = useSelector((state) => state.languageSlice.value);
 
-            const repeatText = Math.floor(divWidth / textWidth) -1;
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+
+            const windowWidthSize = window.innerWidth;
+
+            const repeatText = Math.floor(windowWidthSize / 400) -1;
             let multiplicateText = initialText;
 
             for (let index = 0; index < repeatText; index++) {
                 multiplicateText += initialText;
             }
 
-            setDynamicText(multiplicateText)
+            setDynamicText(multiplicateText);
+      }, []);
+
+      useEffect(() => {
+
+        if(isMounted){
+            if(language == "EN")
+                setDynamicText(dynamicText.replaceAll("Desenvolvimento mobile", "Mobile development"));
+            else
+                setDynamicText(dynamicText.replaceAll("Mobile development", "Desenvolvimento mobile"));
         }
-    }, [divWidth, textWidth])
+        else{
+            setIsMounted(true);
+        }
+
+        
+      }, [language])
 
     return (
-        <div className="bg-dark text-white overflow-hidden flex" ref={divRef}>
+        <div className="bg-dark text-white overflow-hidden flex">
              <motion.div
-                animate={{ x: ['100vw', '2vw', '-100vw'] }}
-                transition={{ ease: "easeOut", duration: 12, repeat: Infinity }}>
-                <p className="py-4 text-sm  md:text-lg uppercase font-semibold text-end whitespace-nowrap w-full">
-                    <span ref={textRef} className={textWidth ? "text-white": "text-black"}>
+                animate={{ x: ['100vw', '-100vw'] }}
+                transition={{ ease: "easeInOut", duration: 14, repeat: Infinity }}>
+                <p className="py-4 text-sm uppercase font-semibold text-end whitespace-nowrap w-full">
+                    <span>
                         {dynamicText.slice(0,-1)}
                     </span>
                 </p>

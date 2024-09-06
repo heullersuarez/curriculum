@@ -6,13 +6,17 @@ import { FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import { useSelector } from "react-redux";
+
 export default function Contact() {
+
+    const language = useSelector((state) => state.languageSlice.value);
 
     return (
         <section 
-            className="bg-light relative overflow-hidden min-h-[50vh] flex flex-col gap-5 justify-center items-center
+            className="bg-light relative overflow-hidden h-[50vh] min-h-[400px] flex flex-col gap-5 justify-center items-center
             border-solid border-t-2 border-dark border-opacity-10">
-            <h3 className="text-4xl md:text-8xl uppercase font-bold text-dark text-opacity-10">Contato</h3>
+            <h3 className="text-4xl md:text-8xl uppercase font-bold text-dark text-opacity-10">{language == "PT"? "Contato": "Contact"}</h3>
                 <Image
                     className="absolute top-0 right-1/4 scale-x-[-1] w-[80px]"
                     src="/memphis_1.png"
