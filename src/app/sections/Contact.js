@@ -18,10 +18,10 @@ export default function Contact() {
             border-solid border-t-2 border-dark border-opacity-10">
             <h3 className="text-4xl md:text-8xl uppercase font-bold text-dark text-opacity-10">{language == "PT"? "Contato": "Contact"}</h3>
                 <Image
-                    className="absolute top-0 right-1/4 scale-x-[-1] w-[80px]"
-                    src="/memphis_1.png"
-                    width={100}
-                    height={100}
+                    className="absolute top-10 md:top-0 right-2 md:right-1/4  w-[250px] md:w-[400px]"
+                    src="/memphis.png"
+                    width={400}
+                    height={140}
                     alt="Picture of the author">
                 </Image>
             <div className="flex gap-3">
