@@ -7,13 +7,13 @@ import Footer from "./sections/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-full h-full">
       <Header/>
       <AboutMe/>
-      <Projects/>
+      {/*<Projects/>*/}
       <Skills/>
       <Contact/>
-      <Footer/>
+      <Footer/> 
     </main>
   );
 }

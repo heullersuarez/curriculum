@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 export default function AboutMe() {
 
     const { scrollYProgress } = useScroll();
-    const xPosition = useTransform(scrollYProgress, [0,0.5], ['0%', '50%']);
+    const xPosition = useTransform(scrollYProgress, [0,0.5], ['5%', '45%']);
     const language = useSelector((state) => state.languageSlice.value);
 
     return (
