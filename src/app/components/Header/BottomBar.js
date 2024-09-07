@@ -5,8 +5,8 @@ import { useSelector } from "react-redux";
 
 export default function BottomBar() {
 
-    const initialText = ' Desenvolvimento mobile / React Native / Node JS /';
-    const initialTextEN = ' Mobile development / React Native / Node JS /';
+    const initialText = ' Desenvolvimento de software / React / React Native / Node JS /';
+    const initialTextEN = ' Software development / React / React Native / Node JS /';
     const [dynamicText, setDynamicText] = useState(initialText);
     const language = useSelector((state) => state.languageSlice.value);
     const [isMounted, setIsMounted] = useState(false);
@@ -16,7 +16,9 @@ export default function BottomBar() {
         const windowWidthSize = window.innerWidth;
         setWindowWidth(windowWidthSize);
 
-        const repeatText = Math.floor(windowWidthSize / 400) -1;
+        console.log(windowWidthSize);
+
+        const repeatText = Math.floor(windowWidthSize / 460) -1;
         let multiplicateText = "";
 
         if(language == "PT")
@@ -62,7 +64,7 @@ export default function BottomBar() {
     return (
         <div className="bg-dark text-white overflow-hidden flex">
              <motion.div
-                animate={{ x: ['100vw', '-115vw'] }}
+                animate={{ x: ['100vw', '-150vw'] }}
                 transition={{ ease: "easeInOut", duration: 14, repeat: Infinity }}>
                 <p className="py-4 text-sm uppercase font-semibold text-end whitespace-nowrap w-full">
                     <span>
