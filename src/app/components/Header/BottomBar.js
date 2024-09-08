@@ -16,8 +16,6 @@ export default function BottomBar() {
         const windowWidthSize = window.innerWidth;
         setWindowWidth(windowWidthSize);
 
-        console.log(windowWidthSize);
-
         const repeatText = Math.floor(windowWidthSize / 460) -1;
         let multiplicateText = "";
 
@@ -38,9 +36,9 @@ export default function BottomBar() {
 
         if(isMounted){
             if(language == "EN")
-                setDynamicText(dynamicText.replaceAll("Desenvolvimento mobile", "Mobile development"));
+                setDynamicText(dynamicText.replaceAll("Desenvolvimento de software", "Software development"));
             else
-                setDynamicText(dynamicText.replaceAll("Mobile development", "Desenvolvimento mobile"));
+                setDynamicText(dynamicText.replaceAll("Software development", "Desenvolvimento de software"));
         }
         else{
             setIsMounted(true);
@@ -65,7 +63,7 @@ export default function BottomBar() {
         <div className="bg-dark text-white overflow-hidden flex">
              <motion.div
                 animate={{ x: ['100vw', '-150vw'] }}
-                transition={{ ease: "easeInOut", duration: 14, repeat: Infinity }}>
+                transition={{ ease: "circInOut", duration: 20, repeat: Infinity }}>
                 <p className="py-4 text-sm uppercase font-semibold text-end whitespace-nowrap w-full">
                     <span>
                         {dynamicText.slice(0,-1)}

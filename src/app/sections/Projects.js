@@ -8,7 +8,7 @@ export default function Projects() {
     const language = useSelector((state) => state.languageSlice.value);
     
     return (
-        <section>
+        <section className="w-full">
             <h2 className="p-8
             bg-dark
             text-3xl md:text-6xl uppercase font-bold text-light text-center">

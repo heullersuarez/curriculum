@@ -10,10 +10,10 @@ export default function Home() {
     <main className="w-full h-full">
       <Header/>
       <AboutMe/>
-      {/*<Projects/>*/}
+      <Projects/>
       <Skills/>
       <Contact/>
-      <Footer/> 
+      <Footer/>
     </main>
   );
 }

@@ -8,7 +8,7 @@ export default function StartInfo(){
     const language = useSelector((state) => state.languageSlice.value);
 
     return (
-        <div className="flex-1 grid grid-rows-2 md:grid-cols-2 md:grid-rows-none md:min-h-[400px]">
+        <div className="flex-1 grid grid-rows-2 md:grid-cols-2 md:grid-rows-none md:min-h-[500px]">
             <div className="flex p-3 md:pl-40 items-center">
                 <motion.div
                     initial={{ opacity: 0 }}

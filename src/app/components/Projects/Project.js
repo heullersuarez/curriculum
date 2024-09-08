@@ -6,15 +6,13 @@ import { useEffect, useRef, useState } from "react";
 
 import { useSelector } from "react-redux";
 
-import "@/app/assets/styles/project.css";
-
 export default function Project(props) {
     
     const { scrollYProgress } = useScroll();
     const [isVisible, setIsVisible] = useState(false);
     const refProjectPT = useRef(null);
     const refProjectEN = useRef(null);
-    const yPosition = useTransform(scrollYProgress, [0,1], ['10%', '-40%'], {ease: anticipate});
+    const yPosition = useTransform(scrollYProgress, [0,1.25], ['200%', '100%'], {ease: anticipate});
     const language = useSelector((state) => state.languageSlice.value);
 
     const handleScroll = () => {
@@ -38,7 +36,7 @@ export default function Project(props) {
     });
 
     return (
-        <div className={`${props.background} h-screen flex flex-col md:grid md:grid-cols-2`}>
+        <div className={`${props.background} h-screen flex flex-col md:grid md:grid-cols-2 md:min-h-[800px]`}>
             <div className="md:h-full md:grid md:grid-rows-2">
                 <div className={`flex flex-col md:justify-end items-end ${props.color}`}>
                     <div className="p-4 md:p-0 md:w-8/12">
@@ -61,27 +59,29 @@ export default function Project(props) {
                     </div>
                 </div>
             </div>
-            <div className="relative container-image">
-                <motion.div
-                    className="absolute bottom-0 left-4"
-                    style={{ y: yPosition }}>
-                    <Image
-                        src={props.image1}
-                        width={1080}
-                        height={1080}
-                        alt="Login page of system matchday">
-                    </Image>
-                </motion.div>
-                <motion.div
-                    className="absolute bottom-0 left-1/2"
-                    style={{ y: yPosition }}>
-                    <Image
-                        src={props.image2}
-                        width={1080}
-                        height={1080}
-                        alt="Splash screen of system matchday">
-                    </Image>
-                </motion.div>
+            <div>
+                <div className="relative w-full md:w-4/5">
+                    <motion.div
+                        className="absolute bottom-0 z-10"
+                        style={{ y: yPosition }}>
+                        <Image
+                            src={props.image1}
+                            width={1080}
+                            height={1080}
+                            alt="Login page of system matchday">
+                        </Image>
+                    </motion.div>
+                    <motion.div
+                        className="absolute top-0 w-1/2 right-0 z-20"
+                        style={{ y: yPosition }}>
+                        <Image
+                            src={props.image2}
+                            width={1080}
+                            height={1080}
+                            alt="Splash screen of system matchday">
+                        </Image>
+                    </motion.div>
+                </div>
             </div>
         </div>
     );

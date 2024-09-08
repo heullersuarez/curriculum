@@ -9,7 +9,7 @@ export default function LanguageBar() {
     const dispatch =  useDispatch();
 
     return(
-        <div className="bg-light shadow-sm flex justify-end items-center md:px-20 py-3 text-lg fixed w-screen z-10">
+        <div className="bg-light shadow-sm flex justify-end items-center md:px-20 py-3 text-lg fixed w-screen z-50">
           <button 
             className={`buttonLanguage ${language == "PT" ? "activeLanguage": ""}`}
             onClick={() => {

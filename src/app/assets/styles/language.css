@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .buttonLanguage {
-    @apply px-3 font-bold text-black text-opacity-60 hover:text-opacity-40
+    @apply px-3 font-bold text-black text-opacity-30 hover:text-opacity-10
 }
 
 .activeLanguage {
-    @apply text-opacity-100
+    @apply text-opacity-100 !important 
 }
