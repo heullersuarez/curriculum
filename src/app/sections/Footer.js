@@ -15,7 +15,7 @@ export default function Footer(){
                 {
                     language == "PT" ?
                     `Direitos autorais © ${year} - Todos os direitos reservados por Héuller`:
-                    `Copyright © ${year} - All right reserved by Héuller`
+                    `Copyright © ${year} - All rights reserved by Héuller`
                 }
         </div>
     );
