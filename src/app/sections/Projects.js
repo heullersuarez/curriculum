@@ -24,7 +24,7 @@ export default function Projects() {
                 }
                 image1="/project_0_0.png"
                 image2="/project_0_1.png"
-                background="bg-dark bg-opacity-90" color="text-white"/>
+                background="bg-dark bg-opacity-95" color="text-white"/>
         </section>
     );
 }
