@@ -14,11 +14,11 @@ export default function Contact() {
 
     return (
         <section 
-            className="bg-light relative overflow-hidden h-[50vh] min-h-[400px] flex flex-col gap-5 justify-center items-center
+            className="bg-light relative overflow-hidden h-[50vh] min-h-[25rem] flex flex-col gap-5 justify-center items-center
             border-solid border-t-2 border-dark border-opacity-10">
             <h3 className="text-4xl md:text-8xl uppercase font-bold text-dark text-opacity-10">{language == "PT"? "Contato": "Contact"}</h3>
                 <Image
-                    className="absolute top-10 md:top-0 right-2 md:right-1/4  w-[250px] md:w-[400px]"
+                    className="absolute top-10 md:top-0 right-2 md:right-1/4 w-[20rem]"
                     src="/memphis.png"
                     width={400}
                     height={140}

@@ -12,7 +12,7 @@ export default function Project(props) {
     const [isVisible, setIsVisible] = useState(false);
     const refProjectPT = useRef(null);
     const refProjectEN = useRef(null);
-    const yPosition = useTransform(scrollYProgress, [0,1.25], ['200%', '100%'], {ease: anticipate});
+    const yPosition = useTransform(scrollYProgress, [0,1.25], ['125%', '75%'], {ease: anticipate});
     const language = useSelector((state) => state.languageSlice.value);
 
     const handleScroll = () => {
@@ -36,7 +36,7 @@ export default function Project(props) {
     });
 
     return (
-        <div className={`${props.background} h-screen flex flex-col md:grid md:grid-cols-2 md:min-h-[800px]`}>
+        <div className={`${props.background} h-screen flex flex-col md:grid md:grid-cols-2 md:min-h-[50rem]`}>
             <div className="md:h-full md:grid md:grid-rows-2">
                 <div className={`flex flex-col md:justify-end items-end ${props.color}`}>
                     <div className="p-4 md:p-0 md:w-8/12">
@@ -60,7 +60,7 @@ export default function Project(props) {
                 </div>
             </div>
             <div>
-                <div className="relative w-full md:w-4/5">
+                <div className="relative w-full sm:w-4/5 md:w-full xl:w-4/5">
                     <motion.div
                         className="absolute bottom-0 z-10"
                         style={{ y: yPosition }}>

@@ -10,7 +10,7 @@ export default function Skills() {
     const language = useSelector((state) => state.languageSlice.value);
 
     return (
-        <section className="bg-light relative overflow-hidden min-h-[50vh] md:min-h-[400px] flex justify-center">
+        <section className="bg-light relative overflow-hidden min-h-[25rem] flex justify-center">
             <motion.div 
                 style={{ x: xPosition }}
                 className="text-4xl md:text-8xl uppercase font-bold text-dark text-opacity-10 
