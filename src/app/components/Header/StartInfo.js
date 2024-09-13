@@ -16,7 +16,7 @@ export default function StartInfo(){
                     transition={{ ease: "easeOut", duration: 1, delay: 0 }}>
                     <div className="pt-5">
                         <h1 className="text-6xl xl:text-8xl font-bold">Héuller</h1>
-                        <h2 className="text-xl xl:text-3xl font-extralight">{language == "PT" ? "Desenvolvedor de software full-stack": "Full-stack software developer"}</h2>
+                        <h2 className="text-xl xl:text-3xl font-extralight">{language == "PT" ? "Desenvolvedor de software full stack": "Full stack software developer"}</h2>
                     </div>
                 </motion.div>
             </div>
