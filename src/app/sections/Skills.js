@@ -15,7 +15,7 @@ export default function Skills() {
                 style={{ x: xPosition }}
                 className="text-4xl md:text-8xl uppercase font-bold text-dark text-opacity-10 
                 absolute left-0 top-0 flex h-full w-full">
-                    <h3 className="py-8">{language == "PT" ? "Habilidades": "Skills" }</h3>
+                    <h2 className="py-8">{language == "PT" ? "Habilidades": "Skills" }</h2>
             </motion.div>
             <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-20 pt-20 md:pt-0">
                 <div className="text-center font-bold text-lg">
@@ -30,7 +30,7 @@ export default function Skills() {
                         <>
                             <p>System design (UI)</p>
                             <p>User experience (UX) </p>
-                            <p>Efficient and minimalist solutions.</p>
+                            <p>Efficient and minimalist solutions</p>
                         </>
                     }
                     

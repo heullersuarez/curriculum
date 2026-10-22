@@ -11,20 +11,31 @@ export default function Projects() {
         <section className="w-full">
             <h2 className="p-8
             bg-dark
-            text-3xl md:text-6xl uppercase font-bold text-light text-center">
-                {language == "PT" ? "Projeto": "Project"}
+            text-4xl md:text-8xl uppercase font-bold text-light text-center">
+                {language == "PT" ? "Projetos": "Projects"}
                 {/* Projetos */}
             </h2>
             <Project 
-                title="Matchday"
-                tags={language == "PT" ? "Futebol • Conexão": "Football • Connection"}
+                title="GUARDIAO"
+                tags={language == "PT" ? "DIREITO • FINANCEIRO": "LAW • FINANCE"}
                 description={language == "PT" ? 
-                    "Aplicativo em desenvolvimento que conectará pessoas que desejam encontrar partidas de futebol por perto para jogar." :
-                    "An app in development that will connect people who want to find nearby soccer games to play."
+                    "Sistema que informa ao usuário a necessidade de informar ao seu cliente que um dos pagamentos está na data de vencimento." :
+                    "A system that notifies the user when they need to inform a client that one of the payments is due."
                 }
-                image1="/project_0_0.png"
-                image2="/project_0_1.png"
-                background="bg-dark bg-opacity-95" color="text-white"/>
+                image1="/guardiao-1.png"
+                image2="/guardiao-2.png"
+                background="bg-light" color="text-dark"/>
+            <Project
+                title="UNIDOS"
+                tags={language == "PT" ? "FUTEBOL • GERENCIAMENTO": "FOOTBALL • MANAGEMENT"}
+                description={language == "PT" ?
+                    "Aplicação desenvolvida para que o time de São Gonçalo do Sapucaí chamado Unidos possa gerenciar seu time, controlando frequência, mensalidade, quantidade de gols, cartões amarelos e vários outros pontos." :
+                    "An application developed to help Unidos, a team from São Gonçalo do Sapucaí, manage its team by tracking attendance, membership fees, goals, yellow cards, and many other details."
+                }
+                image1="/unidos.png"
+                image1Alt="Tela de ranking geral do Unidos FC"
+                staticImage1
+                background="bg-dark" color="text-white"/>
         </section>
     );
 }

@@ -9,14 +9,14 @@ export default function Footer(){
     const language = useSelector((state) => state.languageSlice.value);
 
     return(
-        <div 
-            className="h-12 bg-dark text-center text-light 
-            flex items-center justify-center font-bold text-sm">
+        <footer
+            className="min-h-12 px-3 py-3 bg-dark text-center text-light
+            flex items-center justify-center font-bold text-xs sm:text-sm">
                 {
                     language == "PT" ?
                     `Direitos autorais © ${year} - Todos os direitos reservados por Héuller`:
                     `Copyright © ${year} - All rights reserved by Héuller`
                 }
-        </div>
+        </footer>
     );
 }

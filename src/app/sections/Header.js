@@ -6,7 +6,7 @@ import StartInfo from "../components/Header/StartInfo";
 
 export default function Header() {
     return (
-        <header className="bg-light bg-opacity-50 h-screen flex flex-col text-dark">
+        <header className="min-h-screen flex flex-col text-dark bg-gradient-to-br from-[#fff8f2] via-light to-[#eadfd8]">
             <LanguageBar/>
             <StartInfo/>
             <BottomBar/>
